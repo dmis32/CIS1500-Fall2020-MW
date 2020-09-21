@@ -3,16 +3,9 @@ package project0;
 import java.util.Scanner;
 
 public class Project0 {
-
-    /*
-    Output the number of remaining number of semesters 
-        ( be sure to use a whole number rounded up, you can't take .314 of a semester ), 
-    and the estimated cost to complete the degree.
-    */
     
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        
        
         System.out.println("Hello hooman, Enter your name:");
         String name = keyboard.nextLine();
@@ -34,8 +27,14 @@ public class Project0 {
         double costRemaining = ( totalCreditsRequired - creditsEarned ) * costPerCredit;
         
         System.out.println("Calculating...");
-        System.out.println("You have " + semestersRemaining + " more semesters.");
-        System.out.println("Esimated cost of $" + costRemaining + " + books and fees");
+        System.out.printf("You have %.0f more semesters.\n", semestersRemaining);
+        System.out.printf("Esimated cost of $%,.2f + books and fees\n", costRemaining);
+        
+        String output = 
+            String.format("You have %.0f more semesters.\nEsimated cost of $%,.2f + books and fees\n",
+                    semestersRemaining, costRemaining);
+        
+        System.out.println(output);
+        
     }
-    
 }
