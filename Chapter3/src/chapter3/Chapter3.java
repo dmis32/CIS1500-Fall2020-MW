@@ -78,7 +78,7 @@ public class Chapter3 {
             System.out.println("Invalid score!");
         }
         
-        
+        // if you wanted to go the other direction
         if ( score >= 94 ) {
             System.out.println("A");
         }
@@ -107,6 +107,59 @@ public class Chapter3 {
         }
         else {
             System.out.println("Buckle up and grab some coffee, it's lecture time!");
+        }
+        
+        // continued examples from Monday
+        System.out.println("It's Monday! Let's finish the chapter");
+        
+        System.out.println("Enter a number");
+        int first = keyboard.nextInt();
+        
+        System.out.println("Enter another number");
+        int second = keyboard.nextInt();
+        
+        int biggestNumber;
+        if ( first > second ){
+            biggestNumber = first;
+        }
+        else {
+            biggestNumber = second;
+        }
+        
+        System.out.println("The biggest number is: " + biggestNumber);
+        
+        System.out.println("Enter a number");
+        int third = keyboard.nextInt();
+        
+        System.out.println("Enter another number");
+        int fourth = keyboard.nextInt();
+        
+        // same as the if else above
+        // hey, foudn some code here, lol - 
+        int anotherBiggestNumber = third > fourth ? third : fourth;
+        
+        // get the enter key from the previous int input
+        keyboard.nextLine();
+        System.out.println("Enter your favorite season");
+        String season = keyboard.nextLine();
+        
+        switch(season.toLowerCase())
+        {
+            case "spring":
+                System.out.println("You must love flowers growing");
+                break;
+            case "summer":
+                System.out.println("I'm not a fan of hot weather, are you crazy?");
+                break;
+            case "autumn":    
+            case "fall":
+                System.out.println("The trees are so pretty!");
+                break;
+            case "winter":
+                System.out.println("Freshly fallen snow is so peacful!");
+                break;
+            default:
+                System.out.println("I don't know that season, are you from earth?");
         }
     }
 }
