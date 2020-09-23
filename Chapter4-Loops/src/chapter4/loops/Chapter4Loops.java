@@ -100,5 +100,8 @@ public class Chapter4Loops {
         }  
         System.out.println("Thanks for stopping by the Java shop!");
         System.out.printf("Your total is: $%.2f\n", totalPurchase);
+        
+        
+        System.out.println("TODO - for loops, do while loops, break/continue ");
     }
 }
