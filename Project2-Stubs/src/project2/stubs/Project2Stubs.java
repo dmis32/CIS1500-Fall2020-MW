@@ -51,7 +51,7 @@ After all the commands have been entered, ask the user to enter a
     {
         // FIX ME
         String command = "";
-        while ( command == "quitCreateMode" )
+        while ( !command.equalsIgnoreCase("quitCreateMode") )
         {
            createSingleCommandFile(command); 
         }
