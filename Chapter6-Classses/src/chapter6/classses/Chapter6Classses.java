@@ -22,6 +22,12 @@ public class Chapter6Classses {
         System.out.println(oakTree);
 
         Tree mapleTree = new Tree("Maple");
+        mapleTree.grow(50);
+        
+        
+        Tree elmTree = new Tree("Elm", 40, 63);
+        System.out.println(elmTree);
+        
         System.out.println("The type of tree has " + mapleTree.getType().length() + " chars");
 
         Cup snorlaxMug = new Cup();
@@ -35,6 +41,9 @@ public class Chapter6Classses {
         }
 
         printCup(snorlaxMug);
+        
+        Rectangle rectangle = new Rectangle(2, 3);
+        
 
     }
 

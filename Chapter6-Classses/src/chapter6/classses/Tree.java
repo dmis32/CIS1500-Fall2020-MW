@@ -14,6 +14,13 @@ public class Tree {
         heightInCentimeters = 0;
     }
 
+    public Tree(String type, int age, int growthInCentimetersPerYear) {
+        // this might be silly, but it's just an example
+        this(type);
+        setGrowthInCentimetersPerYear(growthInCentimetersPerYear);
+        grow(age);
+    }
+
     public String getType() {
         return type;
     }
@@ -27,6 +34,23 @@ public class Tree {
         heightInCentimeters += growthInCentimetersPerYear;
     }
 
+    public void grow(int yearsToGrow) {
+        if (yearsToGrow > 0) {
+            age += yearsToGrow;
+            heightInCentimeters += yearsToGrow * growthInCentimetersPerYear;
+        }
+
+        // this is an option
+        // for ( int year = 0; year < yearsToGrow; year++)
+        // {
+        //    grow();
+        // }
+    }
+
+    public void grow(String yearsToGrow) {
+        grow(Integer.parseInt(yearsToGrow));
+    }
+
     public int getHeight() {
         return heightInCentimeters;
     }
@@ -36,9 +60,14 @@ public class Tree {
     }
 
     public void setGrowthInCentimetersPerYear(int growthInCentimetersPerYear) {
-        this.growthInCentimetersPerYear = growthInCentimetersPerYear;
+        if (growthInCentimetersPerYear > 0) {
+            this.growthInCentimetersPerYear = growthInCentimetersPerYear;
+        } else {
+            this.growthInCentimetersPerYear = 0;
+        }
     }
 
+    @Override
     public String toString() {
         return "Tree type: " + type + " Height (cm): " + heightInCentimeters
                 + " Age: " + age;
